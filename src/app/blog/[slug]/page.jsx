@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./singlePost.module.css";
-// import PostUser from "@/components/postUser/postUser";
+import PoutUser from "@/components/postUser/PostUser";
 import { Suspense } from "react";
-// import { getPost } from "@/lib/data";
+import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
@@ -14,6 +14,7 @@ const getData = async (slug) => {
 
   return res.json();
 };
+
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
